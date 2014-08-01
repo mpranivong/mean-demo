@@ -2,6 +2,8 @@
   "name": "mean-demo-youtube",
   "version": "0.0.1",
   "dependencies": {
-    "express": "^4.7.2"
+    "body-parser": "^1.5.2",
+    "express": "^4.7.2",
+    "mongoose": "^3.8.14"
   }
 }

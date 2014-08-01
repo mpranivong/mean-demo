@@ -1,5 +1,46 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="hotelApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
-  Hello!
+
+  <!-- hotel view -->
+  <div ng-controller="hotelsController">
+    <h1>There are {{hotels.length}} hotels</h1>
+    <ul>
+      <li ng-repeat="hotel in hotels">
+        {{hotel.name}}
+      </li>
+    </ul>
+    <form ng-submit="addHotel()">
+      <input type="text" placeholder="Hotel name" ng-model="hotelName"/>
+      <button type="submit">Add</button>
+    </form>
+  </div>
+
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular-resource.js"></script>
+
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/controllers/hotels-controller.js"></script>
 </body>
 </html>
+<!--
+angular-sanitize.js
+angular-resource.min.js
+angular-resource.js
+angular-mocks.js
+angular-cookies.js
+angular.min.js
+angular-loader.js
+angular.js
+angular-loader.min.js
+angular-cookies.min.js
+angular-sanitize.min.js
+-->
